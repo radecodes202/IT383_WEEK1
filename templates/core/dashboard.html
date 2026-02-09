@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <h1>Dashboard</h1>
+    <p>Total Assets: {{ stats.total_assets }}</p>
+    <p>Total Users: {{ stats.total_users }}</p>
+    <p>Total Projects: {{ stats.total_projects }}</p>
+    <p>Total Organizations: {{ stats.total_organizations }}</p>
+    <p>Total Leaves: {{ stats.total_leaves }}</p>
+    <p>Total Products: {{ stats.total_products }}</p>
+    <p>Total Warehouses: {{ stats.total_warehouses }}</p>
+    <p>Total Stock Movements: {{ stats.total_stock_movements }}</p>
+    <p>Recent Assets:</p>
+    <ul>
+        {% for asset in recent_assets %}
+        <li>{{ asset.name }} - {{ asset.serial_number }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
